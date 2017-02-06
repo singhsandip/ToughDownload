@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         intent = new Intent(this,Download_Data.class);
        // intent.putExtra("url","https://www.planwallpaper.com/static/images/HD-Wallpaer.jpg");
+        intent.setAction(Constants.ACTION.STARTFOREGROUND_ACTION);
         startService(intent);
         /*notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
         builder = new NotificationCompat.Builder(this);
@@ -78,7 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         stopService(intent);
     }
 
-   /* @Override
+
+/* @Override
     protected void onStop() {
         Intent intent = new Intent();
         intent.setAction("ACTION_POWER_CONNECTED");
